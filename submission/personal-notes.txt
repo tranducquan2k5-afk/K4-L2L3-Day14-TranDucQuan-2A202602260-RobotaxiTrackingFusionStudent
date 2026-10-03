@@ -1,0 +1,35 @@
+PHIẾU CÁ NHÂN — DAY 14
+Điền file này, chạy QC vào submission/qc-j01 và submission/qc-practice, commit rồi nộp link repo.
+Không dán ảnh, toạ độ điểm hay nội dung file export vào đây.
+
+Họ tên / mã học viên:
+Object J01 (a/b/c/d theo docs/cases.md) / track ID trong task J01:
+Phiên bản CVAT / overlay đã bật (có/không):
+
+J01 — TRACK LÕI
+Frame fit và lý do:
+L / W / H (m):
+Keyframe quan trọng và lý do:
+Đã bấm F qua đủ frame 0–65 (có/không):
+Đoạn thưa / che khuất / dễ nhầm identity:
+
+SELF-QC (từ qc_tracks.csv / qc_flags.csv)
+Lần QC đầu — cờ của track J01 (loại, frame):
+Quyết định cho từng cờ (sửa / giữ vì hợp lệ / chưa đủ evidence) và lý do:
+Đã sửa gì sau QC đầu; QC cuối còn cờ nào:
+Nhận xét của bạn cùng cặp và bạn đồng ý/không đồng ý vì sao:
+
+CAMERA–LIDAR (overlay trên image_1)
+Ca bình thường (frame / quan sát):
+Ca khó (frame / quan sát 2D / quan sát 3D):
+Giả thuyết nguyên nhân (annotation / FOV / occlusion / sparse / nghi calibration / chưa đủ evidence):
+Hành động (sửa / giữ / báo Lab Coach) và lý do:
+
+CASE NGẮN (task practice)
+Case → track ID (ví dụ B01 → 3):
+Case đã xong:
+Case đang dở / chỗ kẹt:
+fragmentation_suspect ở đầu/cuối case đã kiểm là do cách cắt case (có/không):
+
+THỜI GIAN
+J01 / case ngắn / QC và fusion:

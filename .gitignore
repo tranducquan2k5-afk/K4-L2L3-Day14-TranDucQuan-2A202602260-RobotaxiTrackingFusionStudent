@@ -1,0 +1,19 @@
+__pycache__/
+*.pyc
+.venv/
+.env
+.env.*
+private/
+data/
+outputs/
+*.zip
+*.pcd
+*.jpg
+*.png
+# Ảnh giao diện CVAT của hướng dẫn, phần camera đã làm mờ
+!images/huong-dan/*.png
+*.csv.credentials
+*token*
+*credentials*
+# Bản export CVAT và thư mục giải nén không được commit; chỉ commit CSV QC trong submission/
+exports/

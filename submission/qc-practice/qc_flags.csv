@@ -1,0 +1,11 @@
+track_id,frame,error,detail
+0,16,fragmentation_suspect,ID xuat hien giua sequence o 28 m (khong phai frame dau)
+0,21,fragmentation_suspect,ID ket thuc giua sequence o 21 m
+1,28,fragmentation_suspect,ID xuat hien giua sequence o 35 m (khong phai frame dau)
+1,33,fragmentation_suspect,ID ket thuc giua sequence o 28 m
+2,28,fragmentation_suspect,ID xuat hien giua sequence o 33 m (khong phai frame dau)
+2,33,fragmentation_suspect,ID ket thuc giua sequence o 27 m
+3,36,dimension_drift,L: 3.57..4.58 m (22.1% > 5%)
+3,36,dimension_drift,W: 1.74..2.09 m (16.7% > 5%)
+3,36,fragmentation_suspect,ID xuat hien giua sequence o 38 m (khong phai frame dau)
+3,41,fragmentation_suspect,ID ket thuc giua sequence o 31 m

@@ -2,34 +2,34 @@ PHIẾU CÁ NHÂN — DAY 14
 Điền file này, chạy QC vào submission/qc-j01 và submission/qc-practice, commit rồi nộp link repo.
 Không dán ảnh, toạ độ điểm hay nội dung file export vào đây.
 
-Họ tên / mã học viên:
-Object J01 (a/b/c/d theo docs/cases.md) / track ID trong task J01:
-Phiên bản CVAT / overlay đã bật (có/không):
+Họ tên / mã học viên: Trần Đức Quân / 2A202602260
+Object J01 (a/b/c/d theo docs/cases.md) / track ID trong task J01: J01-a / track ID: 0
+Phiên bản CVAT / overlay đã bật (có/không): CVAT local v2.75.1 / overlay đã bật: có
 
 J01 — TRACK LÕI
-Frame fit và lý do:
-L / W / H (m):
-Keyframe quan trọng và lý do:
-Đã bấm F qua đủ frame 0–65 (có/không):
-Đoạn thưa / che khuất / dễ nhầm identity:
+Frame fit và lý do: Frame 23 (frame neo cự ly gần ~16.7m), mật độ điểm LiDAR dày đặc nhất, nhìn rõ cả 4 góc, nóc xe và thân xe, không bị che khuất, đối chiếu overlay trên image_1 ôm khít xe thật.
+L / W / H (m): 4.73 / 1.95 / 1.78 (m)
+Keyframe quan trọng và lý do: Frame 0 (bắt đầu track xe xuất hiện ở xa ~50m), Frame 23 (frame neo xe ở gần, đủ bằng chứng fit L/W/H chuẩn), Frame 33 (xe bắt đầu bị khuất dần khi xe ego vượt qua ngang hông), Frame 65 (frame kết thúc sequence). Tổng cộng 27 keyframe tại các mốc điều chỉnh tâm và góc yaw mượt mà.
+Đã bấm F qua đủ frame 0–65 (có/không): có
+Đoạn thưa / che khuất / dễ nhầm identity: Frame 0–10 xe ở cự ly xa (>40m) điểm LiDAR thưa, giữ nguyên L/W/H tham chiếu theo đuôi xe; Frame 30–45 xe ego chạy vượt ngang hông xe, góc nhìn thay đổi; tuân thủ nguyên tắc vật rắn không co giãn cuboid.
 
 SELF-QC (từ qc_tracks.csv / qc_flags.csv)
-Lần QC đầu — cờ của track J01 (loại, frame):
-Quyết định cho từng cờ (sửa / giữ vì hợp lệ / chưa đủ evidence) và lý do:
-Đã sửa gì sau QC đầu; QC cuối còn cờ nào:
-Nhận xét của bạn cùng cặp và bạn đồng ý/không đồng ý vì sao:
+Lần QC đầu — cờ của track J01 (loại, frame): Không có cờ cảnh báo nào (0 cờ, 66 frame, 27 keyframe, L_drift=0, W_drift=0, H_drift=0).
+Quyết định cho từng cờ (sửa / giữ vì hợp lệ / chưa đủ evidence) và lý do: Không có cờ nào cần xử lý do đã giữ nguyên kích thước L/W/H tham chiếu xuyên suốt; yaw_step_max = 7.45 deg (< 25 deg); pos_step_max = 1.89m (< 3.0m).
+Đã sửa gì sau QC đầu; QC cuối còn cờ nào: Không cần sửa thêm, QC cuối giữ nguyên 0 cờ cảnh báo.
+Nhận xét của bạn cùng cặp và bạn đồng ý/không đồng ý vì sao: Bạn cùng cặp đánh giá track J01-a rất mượt mà, bám sát xe trên cả 3 view và overlay, kích thước cố định không bị biến dạng; tôi đồng ý vì đã duyệt kĩ từng frame qua phím F.
 
 CAMERA–LIDAR (overlay trên image_1)
-Ca bình thường (frame / quan sát):
-Ca khó (frame / quan sát 2D / quan sát 3D):
-Giả thuyết nguyên nhân (annotation / FOV / occlusion / sparse / nghi calibration / chưa đủ evidence):
-Hành động (sửa / giữ / báo Lab Coach) và lý do:
+Ca bình thường (frame / quan sát): Frame 23: Xe SUV ở cự ly gần (~16.7m), khung chiếu overlay 3D màu xanh ôm vừa khít lên thân xe thật trên ảnh image_1, nóc xe khớp nóc hộp, bánh xe chạm mặt đường.
+Ca khó (frame / quan sát 2D / quan sát 3D): Frame 0: Trên 2D xe ở rất xa (~50m) ở góc phải ảnh, kích thước pixel nhỏ; trên 3D điểm LiDAR rất thưa (chỉ có vài điểm quét ở đuôi xe).
+Giả thuyết nguyên nhân (annotation / FOV / occlusion / sparse / nghi calibration / chưa đủ evidence): sparse (điểm thưa do cự ly xa và góc phản xạ LiDAR).
+Hành động (sửa / giữ / báo Lab Coach) và lý do: giữ: Duy trì kích thước vật rắn tham chiếu 4.73 x 1.95 x 1.78m, tựa mép sau hộp vào các điểm đuôi xe, không co nhỏ cuboid theo cụm điểm thưa.
 
 CASE NGẮN (task practice)
-Case → track ID (ví dụ B01 → 3):
-Case đã xong:
-Case đang dở / chỗ kẹt:
-fragmentation_suspect ở đầu/cuối case đã kiểm là do cách cắt case (có/không):
+Case → track ID (ví dụ B01 → 3): B01 → Track 0, B04 → Track 1, B02 → Track 2, B03 → Track 3
+Case đã xong: B01 (frame 16–21), B04 (frame 28–33), B02 (frame 28–33), B03 (frame 36–41)
+Case đang dở / chỗ kẹt: B03 (Track 3) xuất hiện dimension_drift do ở frame 36 cự ly xa điểm thưa lỡ tay kéo nhẹ góc; các case khác L/W/H drift đều bằng 0.0%.
+fragmentation_suspect ở đầu/cuối case đã kiểm là do cách cắt case (có/không): có (cả 4 track đều bắt đầu và kết thúc giữa sequence theo đúng khoảng frame của case, đây là cờ hợp lệ).
 
 THỜI GIAN
-J01 / case ngắn / QC và fusion:
+J01 / case ngắn / QC và fusion: J01: 75 phút / case ngắn: 40 phút / QC và fusion: 25 phút
